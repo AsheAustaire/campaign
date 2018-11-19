@@ -1,0 +1,40 @@
+{
+  "abilities": {
+    "skillProficiencies": [
+      "stealth",
+      "sleight of hand",
+      "perception",
+      "acrobatics",
+      "persuasion"
+    ],
+    "weaponProficiencies": [
+      "light",
+      "medium"
+    ],
+    "armorProficiencies": [
+      "light",
+      "medium"
+    ],
+    "toolProficiencies": [
+      "none"
+    ],
+    "spells": [
+      "shadow walker",
+      "feign death"
+    ]
+  },
+  "stats": {
+    "level": 1,
+    "base": {
+      "str": 9,
+      "dex": 15,
+      "const": 12,
+      "int": 10,
+      "wis": 8,
+      "char": 14
+    },
+    "ac": 14,
+    "moveSpeed": 40,
+    "hp": 60
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "abilities": {
+    "skillProficiencies": [
+      "athletics",
+      "survival",
+      "nature",
+      "insight",
+      "intimidation"
+    ],
+    "savingThrowProficiencies": [
+      "strength",
+      "constitution"
+    ],
+    "weaponProficiencies": [
+      "heavy",
+      "medium",
+      "light",
+      "unarmed"
+    ],
+    "armorProficiencies": [
+      "heavy",
+      "medium",
+      "light"
+    ],
+    "toolProficiencies": [
+      "none"
+    ],
+    "spells": [
+      "second wind",
+      "action surge",
+      "make shift master"
+    ]
+  },
+"stats": {
+  "level": 1,
+  "base": {
+    "str": 15,
+    "dex": 13,
+    "const": 14,
+    "int": 9,
+    "wis": 8,
+    "char": 10
+  },
+  "ac": 17,
+  "moveSpeed": 30
+  }
+}
