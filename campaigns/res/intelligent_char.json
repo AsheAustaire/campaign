@@ -1,0 +1,39 @@
+{
+  "abilities": {
+    "skillProficiencies": [
+      "arcana",
+      "history",
+      "religion",
+      "medicine",
+      "deception"
+    ],
+    "weaponProficiencies": [
+      "light"
+    ],
+    "armorProficiencies": [
+      "light"
+    ],
+    "toolProficiencies": [
+      "writing"
+    ],
+    "spells": [
+      "suggest",
+      "comprehend languages",
+      "detect magic"
+    ]
+  },
+  "stats": {
+    "level": 1,
+    "base": {
+      "str": 8,
+      "dex": 10,
+      "const": 9,
+      "int": 15,
+      "wis": 14,
+      "char": 13
+    },
+    "ac": 13,
+    "hp": 40,
+    "moveSpeed": 35
+  }
+}
