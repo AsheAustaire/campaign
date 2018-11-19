@@ -1,0 +1,122 @@
+{
+  "spells": [
+    {
+      "name": "Shadow Walker",
+      "type": [
+        "agile"
+      ],
+      "description": "While stealthing, you may move yourself into a shadow to avoid detection.(20 foot range) Roll a new D20 to re-stealth, with advantage. (Once per rest)"
+    },
+    {
+      "name": "Feign Death",
+      "type": [
+        "agile"
+      ],
+      "description": "Convince any creature that you are dead if creature fails a wisdom saving throw against DC."
+    },
+    {
+      "name": "Aid",
+      "type": [
+        "intelligent",
+        "agile",
+        "strong"
+      ],
+      "description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration."
+    },
+    {
+      "name": "Aid",
+      "type": [
+        "intelligent",
+        "agile",
+        "strong"
+      ],
+      "description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration."
+    },
+    {
+      "name": "Charismatic",
+      "type": [
+        "intelligent",
+        "agile",
+        "strong"
+      ],
+      "description": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
+    },
+    {
+      "name": "Calm Emotions",
+      "type": [
+        "intelligent",
+        "agile",
+        "strong"
+      ],
+      "description": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects.You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the GM rules otherwise."
+    },
+    {
+      "name": "Comprehend Languages",
+      "type": [
+        "intelligent"
+      ],
+      "description": "Use your deep understanding of grammar to piece together any language you hear or read based of interpretation. Use once per short rest."
+    },
+    {
+      "name": "Detect Magic",
+      "type": [
+        "intelligent"
+      ],
+      "description": "Detect if †here is any magical presence within 30 feet of you. Magic you see this way appears as an aura. Spell can penetrate light barriers. Takes around 3-5 minutes to sense. Use once per short rest."
+    },
+    {
+      "name": "Friends",
+      "type": [
+        "intelligent"
+      ],
+      "description": "For the duration, you have advantage on Charisma checks directed at one creature of your choice that isn't hostile toward you. "
+    },
+    {
+      "name": "Cure Wounds",
+      "type": [
+        "intelligent"
+      ],
+      "description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
+    }
+  ],
+  "cantrips": [
+    {
+      "name": "Virtue",
+      "type": [
+        "intelligent",
+        "strong",
+        "agile"
+      ],
+      "description": "You touch a creature with at least 1 hit point. It gains temporary hit points equal to 1d4 + your spellcasting ability modifier for the duration."
+    },
+    {
+      "name": "Bonfire",
+      "type": [
+        "intelligent",
+        "strong",
+        "agile"
+      ],
+      "description": "You create a bonfire on ground that you can see within range. Until the spell ends, the magic bonfire fills a 5-foot cube. Any creature in the bonfire’s space when you cast the spell must succeed on a Dexterity saving throw or take 1d8 fire damage. A creature must also make the saving throw when it moves into the bonfire’s space for the first time on a turn or ends its turn there.The bonfire ignites flammable objects in its area that aren’t being worn or carried.The spell’s damage increases by 1d8 when you reach 5th level (2d8),11th level (3d8), and 17th level (4d8)."
+    },
+    {
+      "name": "Guidance",
+      "type": [
+        "intelligent",
+        "strong",
+        "agile"
+      ],
+      "description": "Touch a willing creature. It can add a 1d4 to one ability check of its choice. The spell then ends. It can roll the die before or after making the check."
+    },
+    {
+      "name": "Vicious Mockery",
+      "type": [
+        "intelligent",
+        "strong",
+        "agile"
+      ],
+      "description": "Choose a creature you can see. If it can hear you, it must pass a Wisdom save or take 1d4 psychic damage and have disadvantage on its next attack roll before the end of its next turn.The damage increases by 1d4 when you reach 5th,11th, and 17th level."
+    }
+  ]
+}
+
+  

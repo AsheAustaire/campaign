@@ -3,22 +3,31 @@
   const fs = require('fs');
   const readline = require("readline-sync");
   const merge = require('deepmerge')
-////////////////////////
-  
-////////////////////////
 
-
-  const character = {};
+  const baseCharacter = {};
 
   // | META INFORMATION
-  let meta = character.meta = {};
-  // |- Player Name
-  meta.playerName = readline.question("What is your name? (Not Character) : ");
+  console.log(`
+  ~~~~~~~~~
+  meta info
+  ~~~~~~~~~
+  `);
+  
+  let meta = baseCharacter.meta = {};
+  // |- Player First Name
+  meta.playerFirstName = readline.question("What is your first name? (Not Character) : ");
+  // |- Player Last Name
+  meta.playerLastName = readline.question("What is your last name? (Not Character) : ");
 
+  console.log(`
+  ~~~~~~~~~~~~~~~~~
+  character general
+  ~~~~~~~~~~~~~~~~~
+  `);
   // | CHARACTER PHYSICAL ATTRIBUTES
-  let general = character.general = {};
+  let general = baseCharacter.general = {};
   // |- Character First Name
-  general.firstName = readline.prompt("What is your Character's First Name? : ");
+  general.firstName = readline.question("What is your Character's First Name? : ");
   // |- Character Last Name
   general.lastName = readline.question("What is your Character's Last Name? : ");
   // |- Character Race
@@ -38,23 +47,37 @@
   // |- Character Type
   general.type = readline.question("Is your character\n1)Strong \n2)Agile \n3)Intelligent? ");
   
+  switch(general.type) {
+    case "1": 
+      general.type = "strong"
+      break;
+    case "2":
+      general.type = "agile"
+      break;
+    case "3":
+      general.type = "intelligent"
+      break;
+  }
+
 //   // | CHARACTER ABILITIES
-  abilities = character.abilities = {};
+  abilities = baseCharacter.abilities = {};
   // |- Spoken Languages
-  abilities.spokenLanguages = [];
+  abilities.spokenLanguages = []; // Decided on by race, type
   // |- Weapon Proficiencies
-  abilities.weaponProficiencies = [];
+  abilities.weaponProficiencies = []; // Decided by type
   // |- Armor Proficiencies
-  abilities.armorProficiencies = [];
+  abilities.armorProficiencies = []; // Decided by type
   // |- Tool Proficiencies
-  abilities.toolProficiencies = [];
+  // abilities.toolProficiencies = []; // Decided by profession
+  // |- Choose Feats
+  abilities.feats = [];
   // |- Choose Cantrips
   abilities.cantrips = [];
   // |- Choose Spells
   abilities.spells = [];
 
   // | CHARACTER STATS
-  let stats = character.stats = {};
+  let stats = baseCharacter.stats = {};
   // |- Character Level
   stats.level = 1;
   // |- STR / DEX / WIS/ INT/ CHAR / CONST
@@ -65,9 +88,6 @@
   stats.base.int = 0;
   stats.base.wis = 0;
   stats.base.char = 0;
-  console.log(character);
-  console.log("");
-  
   // |- STR / DEX / WIS/ INT/ CHAR / CONST // Modifiers
   stats.baseMods = {};
   stats.baseMods.strMod = 0;
@@ -76,6 +96,8 @@
   stats.baseMods.intMod = 0;
   stats.baseMods.wisMod = 0;
   stats.baseMods.charMod = 0;
+  // |- Max HP
+  stats.hp = 0;
   // |- Armor Class
   stats.ac = 0;
   // |- Movement Speed
@@ -83,12 +105,23 @@
   // |- Saving Throws
   stats.savingThrows = [];
   // |- Proficiency Mod
-  stats.proficiencyMod
+  stats.proficiencyMod = 2;
   // |- Initiative Bonus (Dex Modifier)
-  stats.initiativeMod
-  
+  stats.initiativeMod = 2;
+
+  // CHARACTER LIVE STATS
+  let live = baseCharacter.liveStats = {};
+  // |- Initiative Bonus (Dex Modifier)
+  live.currentHp = 0;
+
   // | CHARACTER STORY
-  let story = character.story = {}
+  
+  console.log(`
+  ~~~~~~~~~~~~~~~
+  character story
+  ~~~~~~~~~~~~~~~
+  `);
+  let story = baseCharacter.story = {}
   // |- Brief Description 
   story.short = readline.question("Please provide a few sentences describing your character");
   // |- Background 
@@ -105,16 +138,16 @@
 // /////////////////////////////// 
 
 function assignBaseStats(playerType) {
-
+  console.warn(baseCharacter.general.type.toLowerCase());
   if (playerType === "agile") {
     let agileMod = require("../campaigns/res/agile_char.json");
-    console.log(merge(character, agileMod));
+   return  merge(baseCharacter, agileMod);
   } else if (playerType === "strong") {
     let strongMod = require("../campaigns/res/strong_char.json");
-    console.log(strongMod);
+    return merge(baseCharacter, strongMod);
   } else if (playerType === "intelligent") {
     let intelligentMod = require("../campaigns/res/intelligent_char.json");
-    console.log(intelligentMod);
+    return merge(baseCharacter, intelligentMod);
   }
 
 
@@ -127,11 +160,21 @@ function createJson(fileName, content, callback) {
 
 //////////////////////////////
 
-character = assignBaseStats(character.playerType.toLowerCase())
+const character = assignBaseStats(baseCharacter.general.type.toLowerCase())
+console.log(character);
 
-createJson(character.meta.playerName, JSON.stringify(character), function(err, data){
+  createJson(`${character.general.firstName} ${character.general.lastName}`, JSON.stringify(character), function(err, data){
   console.log(data);
 })
   
 
+
+function test(){
+  console.log('');
+  console.log('');
+  console.log('');
+  console.log('');
+  console.log('');
+  console.log('');
+}
 }())
